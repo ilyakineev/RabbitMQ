@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  rabbitmq_server:
+    container_name: rabbitmq # Имя контейнера
+    image: 'rabbitmq:3.13.0-rc.1-management' # Актуальную версию подтягиваем
+    restart: always # В автоматическом режиме перегружает сервис
+    ports:
+    - "5672:5672" # порт для AMQP протокола
+    - "15672:15672" # порт для RabbitMQ Management Plugin
+    environment:
+      RABBITMQ_DEFAULT_USER: "user" # замените на своего пользователя
+      RABBITMQ_DEFAULT_PASS: "password" # замените на свой пароль
+      RABBITMQ_DEFAULT_VHOST: 'cpp'# Сразу создаем виртуальный хост
