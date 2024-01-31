@@ -10,8 +10,8 @@
 
 1. Клонируйте репозиторий, содержащий файлы Docker Compose:
    ```bash
-   git clone <your_repo_url>
-   cd <your_repo_directory>
+   git clone git clone https://github.com/ilyakineev/RabbitMQ.git
+   cd cd RabbitMQ
    ```
 
 2. Запустите контейнер RabbitMQ с использованием Docker Compose:
