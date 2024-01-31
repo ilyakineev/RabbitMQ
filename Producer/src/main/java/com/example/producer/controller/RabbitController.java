@@ -21,7 +21,6 @@ public class RabbitController {
     @PostMapping("/send")
     public void sendMessageToRabbit(@RequestBody MessageModel messageModel) {
         rabbitMQProducerService.sendMessage(messageModel.getMessage(), messageModel.getRoutingKey());
-        rabbitMQProducerService.sendMessage(messageModel.getMessage(), messageModel.getRoutingKey());
     }
 
     @GetMapping("/health")

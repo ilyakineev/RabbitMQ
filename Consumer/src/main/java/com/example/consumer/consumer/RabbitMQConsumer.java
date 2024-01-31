@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 @EnableRabbit
 public class RabbitMQConsumer {
 
-    @RabbitListener(queues = "queue1")
+    @RabbitListener(queues = "${spring.rabbitmq.myQueue}")
     public void processMyQueue(String message) {
-        System.out.printf("Received from myQueue : %s ", new String(message.getBytes()));
+        System.out.printf("Выводи сообщение из очереди : %s ", new String(message.getBytes()));
     }
 }

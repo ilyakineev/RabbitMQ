@@ -11,7 +11,7 @@
 1. Клонируйте репозиторий, содержащий файлы Docker Compose:
    ```bash
    git clone git clone https://github.com/ilyakineev/RabbitMQ.git
-   cd cd RabbitMQ
+   cd RabbitMQ
    ```
 
 2. Запустите контейнер RabbitMQ с использованием Docker Compose:
@@ -22,10 +22,10 @@
 
 3. Проверьте, что контейнер запущен:
    ```bash
-   docker-compose ps
+   docker ps
    ```
 
-4. Перейдите по адресу [RabbitMQ Management](http://localhost:15672/) и войдите с учетными данными по умолчанию (guest/guest).
+4. Перейдите по адресу [RabbitMQ Management](http://localhost:15672/) и войдите с учетными данными по умолчанию (user/password).
 
 5. Остановите контейнер RabbitMQ при завершении работы:
    ```bash
@@ -53,15 +53,10 @@
 
 - Отправьте тестовое сообщение с помощью curl:
    ```bash
-   curl -X POST -H "Content-Type: application/json" -d '{"message": "just text", "routingKey": "testRoutingKey"}' http://localhost:8086/send
+   curl -X POST -H "Content-Type: application/json" -d '{"message": "Тестовое сообщение!!!", "routingKey": "myRoutingKey"}' http://localhost:8086/send
    ```
 
 ### Возможные проблемы и дополнительные команды:
-
-- Ошибка при запуске Docker:
-   ```bash
-   docker ps
-   ```
 
 - Проверка открытых портов:
    ```bash

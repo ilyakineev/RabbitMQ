@@ -11,4 +11,4 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: "user" # замените на своего пользователя
       RABBITMQ_DEFAULT_PASS: "password" # замените на свой пароль
-      RABBITMQ_DEFAULT_VHOST: 'cpp'# Сразу создаем виртуальный хост
+      RABBITMQ_DEFAULT_VHOST: 'cpp' # Сразу создаем виртуальный хост
